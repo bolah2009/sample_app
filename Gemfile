@@ -17,6 +17,8 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '3.4.1'
 gem 'bootstrap-will_paginate'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 gem 'sass-rails', '~> 5.0'
 gem 'will_paginate'
 # Use Uglifier as compressor for JavaScript assets
@@ -71,6 +73,10 @@ group :test do
   gem 'minitest',                 '5.10.3'
   gem 'minitest-reporters',       '1.1.14'
   gem 'rails-controller-testing', '1.0.2'
+end
+
+group :production do
+  gem 'fog', '1.42'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

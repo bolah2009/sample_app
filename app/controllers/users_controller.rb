@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
     redirect_to(root_url) && return unless @user.activated?
   end
 
@@ -45,9 +46,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:id])
-    name = user.name
-    user.destroy
+    name = @user.name
+    @user.destroy
     flash[:success] = "#{name} has been succesfully deleted"
     redirect_to users_url
   end
@@ -60,15 +60,6 @@ class UsersController < ApplicationController
 
   # Before filters
 
-  # Confirms a logged-in user.
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = 'Please log in to access this page.'
-    redirect_to login_url
-  end
-
   # Confirms the correct user.
   def correct_user
     @user = User.find(params[:id])
@@ -77,6 +68,7 @@ class UsersController < ApplicationController
 
   # Confirms the correct user.
   def admin_user
+    @user = User.find(params[:id])
     redirect_to root_url unless current_user.admin?
   end
 end
