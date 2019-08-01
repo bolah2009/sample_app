@@ -1,0 +1,15 @@
+one:
+  follower: bola
+  followed: ahmed
+
+two:
+  follower: bola
+  followed: amina
+
+three:
+  follower: ahmed
+  followed: bola
+
+four:
+  follower: ebuka
+  followed: bola

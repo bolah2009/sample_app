@@ -21,8 +21,15 @@ amina:
   activated_at: Time.zone.now)
 
 ebuka:
-  name: Ebuka Mumu
+  name: Ebuka Padi
   email: ebuka@example.gov
+  password_digest: <%= User.digest('password') %>
+  activated: true,
+  activated_at: Time.zone.now)
+
+buari:
+  name: Buari Bola
+  email: buari@example.gov
   password_digest: <%= User.digest('password') %>
   activated: true,
   activated_at: Time.zone.now)
