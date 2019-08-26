@@ -1,9 +1,18 @@
 # frozen_string_literal: true
 
 ENV['RAILS_ENV'] ||= 'test'
+require 'simplecov'
+require 'simplecov-console'
+SimpleCov.formatter = SimpleCov::Formatter::Console
+SimpleCov.start :rails do
+  add_filter ['app/channels', 'app/jobs/', 'app/mailers/']
+  add_group 'Models', 'app/models'
+  add_group 'Controllers', 'app/controllers'
+end
 require_relative '../config/environment'
 require 'rails/test_help'
 require 'minitest/reporters'
+
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 class ActiveSupport::TestCase
