@@ -1,0 +1,38 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=705ff985a4346f862fc8e1bf06de67f4e7f54ffa0676b794819cbc97a8926db9
+language: ruby
+rvm:
+  - 2.6.3
+services:
+  - postgresql
+before_install:
+  - gem update --system
+  - gem install bundler
+install: gem install rails
+notifications:
+  - false
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
+script:
+  - bundle install
+  - rails db:migrate
+  - rails test
+after_script:
+  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+deploy:
+  provider: heroku
+  api_key:
+    secure: G+aDCjMPPbLUZ+ANr4bWLH3/JinLul//Hc3HWfFVaz3dMlLgnRMIdkUsLjWHPt2h09hHl3pBS4qiLkcPaAS5xIl2tahyRMhWT6oLksyf7vJUJIfIZA5ilMfx914EmaJV/FCGeBKQLNk8fG+mDwmDfLProlGqitUTkxiS0PoIHJeQVDVgntiUXYUi/MXpr1XlGnt4iowfR3mwUEvP/5CHbGwa9/6YARUdayTrNEDuaKzJ2y/Vo+wiZTE+1dajBmoqUpU4xFhTBHk8KZ7j4UaY6zc0/LzRiRKg1/Zc1UY/N0ykPOws8Jqp0M7jM+VkwTO9vyBhcFK9WfUneY4zzGcFsYvWv76Taxl5MyzvlRCF/L4zkqkVrsgngWyjb7AUQR5K1TfptQx3rMEA+Wmask5utdMV9NApWtXqXs+z7fIDDzz2taPlCt7v0pXoGtexOtcYowSTxdBnHJJc0FKOxQOe4U+dILBILfvVCyGMv7mw0EwE8aTM7qs8zq4SElcTPhXN81Sr7CXjQo6C3oUkUUWa0VTe1xEDikxvaNeL03tj+xvxOYT+M6kx4Qvn4OTgIrfk0M9pRZ/Om1oG17MQSQiPTtc+hwcj1PI3RXKJOgQttVgy6geg5XYiUbOCCwtQnEPU9Y3JjkA0OIfXRJGynKHwP+yC5loYMclSTTxwcXu15AQ=
+  app:
+    master: bolah-sample-app
+    staging: bolah-sample-app-staging
+  run:
+    - sleep 10
+    - "rails db:migrate"
+    - "rails db:seed"

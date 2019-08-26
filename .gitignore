@@ -31,3 +31,7 @@
 
 # Ignore uploaded test images.
 /public/uploads
+
+coverage
+
+heroku_auth.key
