@@ -346,6 +346,85 @@
         1,
         null
       ],
+<<<<<<< HEAD
+=======
+      "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/relationships_controller.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        3,
+        2,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        3,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/application_controller.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        33,
+        null,
+        11,
+        11,
+        11,
+        null,
+        null
+      ],
+      "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/sessions_controller.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        25,
+        null,
+        25,
+        24,
+        23,
+        23,
+        23,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+>>>>>>> e36edde3ed27d68b77566e21febc80ddebe2e452
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/users_controller.rb": [
         null,
         null,
@@ -437,11 +516,16 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/application_controller.rb": [
+=======
+      "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/static_pages_controller.rb": [
+>>>>>>> e36edde3ed27d68b77566e21febc80ddebe2e452
         null,
         null,
         1,
         1,
+<<<<<<< HEAD
         1,
         null,
         1,
@@ -454,6 +538,19 @@
         11,
         11,
         null,
+=======
+        9,
+        null,
+        5,
+        5,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+>>>>>>> e36edde3ed27d68b77566e21febc80ddebe2e452
         null
       ],
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/password_resets_controller.rb": [
@@ -521,6 +618,7 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/sessions_controller.rb": [
         null,
         null,
@@ -553,6 +651,8 @@
         null,
         null
       ],
+=======
+>>>>>>> e36edde3ed27d68b77566e21febc80ddebe2e452
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/account_activations_controller.rb": [
         null,
         null,
@@ -571,6 +671,7 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/static_pages_controller.rb": [
         null,
         null,
@@ -589,6 +690,8 @@
         1,
         null
       ],
+=======
+>>>>>>> e36edde3ed27d68b77566e21febc80ddebe2e452
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/microposts_controller.rb": [
         null,
         null,
@@ -624,6 +727,7 @@
         2,
         null,
         null
+<<<<<<< HEAD
       ],
       "/media/bola/BolahSD/WORKSPACE/WebProjects/microverse-student/sample_app/app/controllers/relationships_controller.rb": [
         null,
@@ -652,5 +756,10 @@
       ]
     },
     "timestamp": 1566816777
+=======
+      ]
+    },
+    "timestamp": 1566814208
+>>>>>>> e36edde3ed27d68b77566e21febc80ddebe2e452
   }
 }
